@@ -1,0 +1,340 @@
+#body {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  bottom: 0;
+  min-height: 90vh;
+  margin: 0 auto;
+}
+
+.card {
+  width: 65%;
+  min-width: 300px;
+  margin: 0 auto;
+  height: auto;
+
+  backdrop-filter: blur(5px);
+  margin: 15px;
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+}
+#message {
+  margin: 0 auto;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+.card span {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 30px;
+  backdrop-filter: blur(5px);
+}
+#left {
+  left: -30px;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  background-color: rgba(17, 40, 53, 0.8);
+}
+.left {
+  background-color: rgba(17, 40, 53, 0.8);
+  margin-left: -5px;
+}
+.right {
+  background-color: rgba(24, 78, 109, 0.8);
+  margin-right: -5px;
+}
+.right #email {
+  background-color: rgba(32, 97, 134, 0.8) !important;
+  color: rgb(211, 211, 211) !important;
+}
+.right #date {
+  color: rgb(211, 211, 211) !important;
+}
+#right {
+  right: -30px;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  background-color: rgba(24, 78, 109, 0.8);
+}
+#rr {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+  width: 100%;
+  overflow-x: hidden;
+
+  align-items: center;
+  flex-direction: column-reverse;
+}
+#add {
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background: rgba(17, 40, 53, 0.3);
+  box-shadow: 0px 0px 50px rgba(71, 140, 180, 0.8);
+  color: white;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  backdrop-filter: blur(3px);
+  position: relative;
+}
+#add:hover {
+  background: rgba(17, 66, 95, 0.8);
+}
+
+#add::after {
+  box-shadow: 0px 0px 50px rgba(71, 140, 180, 0.8);
+  content: "Add Post";
+  position: absolute;
+  width: 0px;
+  right: 60px;
+  overflow: hidden;
+  top: 27%;
+  background: rgba(17, 40, 53, 0.8);
+  transition: 0.3s ease;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 10px;
+}
+#add:hover::after {
+  width: 90px;
+}
+
+#rr #gen {
+  position: fixed;
+  top: 0;
+  z-index: -100000;
+  opacity: 0;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-name: hide;
+  text-align: center;
+  width: 100%;
+}
+
+.card:nth-child(1) {
+  margin-top: 60px;
+}
+.card:last-child {
+  margin-bottom: 100px;
+}
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 40, 53, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 1000000;
+  text-align: center;
+  font-size: 30px;
+  height: 50px;
+
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+#loading {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none !important;
+  justify-content: center;
+  transition: all 0.3s;
+  background-color: rgb(19, 40, 53);
+}
+#body .card img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#body .card h1 {
+  font-size: 18px;
+  color: white;
+  margin-top: 25px;
+}
+#body .card #date {
+  position: absolute;
+  top: -13px;
+  font-size: 13px;
+
+  color: rgb(53, 81, 94);
+  text-align: right;
+  width: auto;
+  padding: 5px;
+  border-radius: 20px;
+
+  left: 5px;
+}
+#add {
+  position: fixed !important;
+  bottom: 15% !important;
+  right: 5% !important;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  
+  border: 1px solid rgba(0, 0, 0, 0.42) !important;
+
+}
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color: #000 !important;
+}
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root{
+  color: rgba(0, 0, 0, 0.6);
+}
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root{
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  color: #000 !important;
+}
+#search {
+  background: rgba(17, 40, 53, 0.3);
+  backdrop-filter: blur(3px);
+  height: 50px;
+  padding: 10px 20px;
+  position: fixed !important;
+  width: auto;
+  bottom: 15%;
+  left: 10%;
+  border-radius: 20px;
+}
+
+.css-1480iag-MuiInputBase-root-MuiInput-root:before {
+  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.42) !important;
+
+}
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+  color: #fff !important;
+}
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root{
+  color: rgba(255, 255, 255, 0.6);
+}
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root{
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.add {
+  width: 50px;
+  height: 50px;
+  position: fixed !important;
+  bottom: 15% !important;
+  left: 5% !important;
+  border: 0;
+  background: rgba(17, 40, 53, 0.3) !important;
+  backdrop-filter: blur(3px) !important;
+  box-shadow: 0px 0px 50px rgba(71, 140, 180, 0.8);
+  color: white;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  position: relative;
+}
+.add:hover {
+
+  background-color: rgba(29, 67, 88, 0.5) !important;
+
+}
+
+#post {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#appBar {
+  background: rgba(17, 40, 53, 0.8);
+}
+.special {
+  position: absolute;
+  bottom: -10px;
+  color: #fff;
+  backdrop-filter: none;
+}
+.card span {
+  backdrop-filter: none;
+}
+#delete {
+  position: absolute;
+  bottom: 35px;
+  right: 0px;
+  z-index: 1000000000000;
+  margin-top: 20px;
+
+  height: 0px;
+  padding: 0px;
+}
+#body .card #email {
+  position: absolute;
+  top: -13px;
+  font-size: 13px;
+
+  color: rgb(53, 81, 94);
+  text-align: right;
+  background-color: rgb(29, 48, 58);
+  width: auto;
+  padding: 5px;
+  border-radius: 20px;
+
+  right: 0px;
+}
+.standard-basic {
+  width: 100% !important;
+  transition: 0.3s ease;
+}
+#body .card #dec {
+  color: white;
+}
+@media screen and (max-width: 1150px) {
+  #search {
+    left: 15% !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  #search {
+    left: 20% !important;
+  }
+  .card {
+    min-width: 66% !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  #date {
+    font-size: 10px !important;
+    margin-top: 15px;
+  }
+  #email {
+    font-size: 10px !important;
+    top: -10px !important;
+  }
+  .card {
+    min-width: 66% !important;
+  }
+  #search {
+    width: 170px !important;
+  }
+}

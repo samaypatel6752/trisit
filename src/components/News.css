@@ -1,0 +1,120 @@
+#body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    bottom: 0;  
+    overflow-y: scroll;
+}
+#html{
+    position: relative;
+    top: 0;
+}
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(17, 40, 53, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 1000000;
+    text-align: center;
+    font-size:30px;
+    height: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    
+  }
+#body #cards{
+    min-width: 300px;
+    max-width: 400px;
+    height: auto;
+    background-color:rgba(17, 40, 53, 0.8);
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+#body #cards:nth-child(1){
+    margin-top:60px;
+}
+#body #cards:last-child{
+    margin-bottom:100px;
+}
+#newss{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0;
+    height: 100%;
+    overflow-y:scroll;
+    width: 100%;
+    margin-left:3px;
+    
+}
+#loading{
+    height: 100%;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    background-color:rgb(19, 40, 53);
+  }
+
+#body #cards img{
+    width: 100%;
+    
+}
+#body #cards #h1{
+    font-size:18px;
+    color: white;
+    margin-top: 25px;
+}
+#body #cards #date{
+    position: absolute;
+    top: -13px;
+    font-size:13px;
+    
+    color: rgb(53, 81, 94);
+    text-align: right;
+    width: auto;
+    padding: 5px;
+    border-radius: 20px;
+    
+    left: 5px;
+}
+#body #cards #email{
+    position: absolute;
+    top: -13px;
+    font-size:13px;
+    
+    color: rgb(53, 81, 94);
+    text-align: right;
+    background-color:rgb(29, 48, 58);
+    width: auto;
+    padding: 5px;
+    border-radius: 20px;
+    
+    right: 0px;
+}
+#body #cards #dec{
+    color:white;
+    overflow: hidden;
+} 

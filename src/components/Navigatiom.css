@@ -1,0 +1,102 @@
+
+.container {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+  }
+  a{
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .phone-bottom {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(17, 40, 53, 0.8);
+    position: relative;
+    padding: 10px 15px;
+    box-shadow: 0px 4px 6px rgba(17, 40, 53, 0.8);
+    backdrop-filter: blur(5px)
+  }
+  .phone-bottom .nav {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+  .phone-bottom .nav .slide {
+    width: calc(100% / 4);
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15);
+    z-index: 2;
+    top: 0;
+    border-radius: 4px;
+    transform: translateX(0%);
+    transition: transform 350ms ease;
+  }
+  .phone-bottom .nav-link {
+    color: #fff;
+    text-decoration: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+  }
+.active Link .nav-text {
+    opacity: 1;
+  }
+  .nav-link{
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    position: relative;
+  }
+  .phone-bottom .nav i {
+    color: #fff;
+    transition: transform 350ms ease;
+  }
+  
+  .material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: "liga";
+
+  }
+
+  
